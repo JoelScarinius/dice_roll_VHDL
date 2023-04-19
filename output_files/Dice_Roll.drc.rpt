@@ -1,0 +1,265 @@
+Design Assistant report for Dice_Roll
+Tue Apr 18 15:09:31 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Design Assistant Summary
+  3. Design Assistant Settings
+  4. Medium Violations
+  5. Information only Violations
+  6. Design Assistant Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Design Assistant Summary                                                ;
++-----------------------------------+-------------------------------------+
+; Design Assistant Status           ; Analyzed - Tue Apr 18 15:09:31 2023 ;
+; Revision Name                     ; Dice_Roll                           ;
+; Top-level Entity Name             ; dice_roll                           ;
+; Family                            ; Cyclone II                          ;
+; Total Critical Violations         ; 0                                   ;
+; Total High Violations             ; 0                                   ;
+; Total Medium Violations           ; 1                                   ;
+; - Rule R102                       ; 1                                   ;
+; Total Information only Violations ; 68                                  ;
+; - Rule T101                       ; 18                                  ;
+; - Rule T102                       ; 50                                  ;
++-----------------------------------+-------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Design Assistant Settings                                                                                                                                                                                                                                                                                ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+----+
+; Option                                                                                                                                                                                                                                                                               ; Setting      ; To ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+----+
+; Design Assistant mode                                                                                                                                                                                                                                                                ; Post-Fitting ;    ;
+; Threshold value for clock net not mapped to clock spines rule                                                                                                                                                                                                                        ; 25           ;    ;
+; Minimum number of clock port feed by gated clocks                                                                                                                                                                                                                                    ; 30           ;    ;
+; Minimum number of node fan-out                                                                                                                                                                                                                                                       ; 30           ;    ;
+; Maximum number of nodes to report                                                                                                                                                                                                                                                    ; 50           ;    ;
+; Rule C101: Gated clock should be implemented according to the Altera standard scheme                                                                                                                                                                                                 ; On           ;    ;
+; Rule C102: Logic cell should not be used to generate an inverted clock signal                                                                                                                                                                                                        ; On           ;    ;
+; Rule C103: Gated clock does not feed at least a pre-defined number of clock ports to effectively save power                                                                                                                                                                          ; On           ;    ;
+; Rule C104: Clock signal source should drive only clock input ports                                                                                                                                                                                                                   ; On           ;    ;
+; Rule C105: Clock signal should be a global signal (Rule applies during post-fitting analysis. This rule applies during both post-fitting analysis and post-synthesis analysis if the design targets a MAX 3000 or MAX 7000 device. For more information, see the Help for the rule.) ; On           ;    ;
+; Rule C106: Clock signal source should not drive registers triggered by different clock edges                                                                                                                                                                                         ; On           ;    ;
+; Rule R101: Combinational logic used as a reset signal should be synchronized                                                                                                                                                                                                         ; On           ;    ;
+; Rule R102: External reset signals should be synchronized using two cascaded registers                                                                                                                                                                                                ; On           ;    ;
+; Rule R103: External reset signal should be correctly synchronized                                                                                                                                                                                                                    ; On           ;    ;
+; Rule R104: The reset signal that is generated in one clock domain and used in another clock domain should be correctly synchronized                                                                                                                                                  ; On           ;    ;
+; Rule R105: The reset signal that is generated in one clock domain and used in another clock domain should be synchronized                                                                                                                                                            ; On           ;    ;
+; Rule T101: Nodes with more than the specified number of fan-outs                                                                                                                                                                                                                     ; On           ;    ;
+; Rule T102: Top nodes with the highest number of fan-outs                                                                                                                                                                                                                             ; On           ;    ;
+; Rule A101: Design should not contain combinational loops                                                                                                                                                                                                                             ; On           ;    ;
+; Rule A102: Register output should not drive its own control signal directly or through combinational logic                                                                                                                                                                           ; On           ;    ;
+; Rule A103: Design should not contain delay chains                                                                                                                                                                                                                                    ; On           ;    ;
+; Rule A104: Design should not contain ripple clock structures                                                                                                                                                                                                                         ; On           ;    ;
+; Rule A105: Pulses should not be implemented asynchronously                                                                                                                                                                                                                           ; On           ;    ;
+; Rule A106: Multiple pulses should not be generated in design                                                                                                                                                                                                                         ; On           ;    ;
+; Rule A107: Design should not contain SR latches                                                                                                                                                                                                                                      ; On           ;    ;
+; Rule A108: Design should not contain latches                                                                                                                                                                                                                                         ; On           ;    ;
+; Rule S101: Output enable and input of the same tri-state node should not be driven by same signal source                                                                                                                                                                             ; On           ;    ;
+; Rule S102: Synchronous port and asynchronous port of the same register should not be driven by the same signal source                                                                                                                                                                ; On           ;    ;
+; Rule S103: More than one asynchronous port of a register should not be driven by the same signal source                                                                                                                                                                              ; On           ;    ;
+; Rule S104: Clock port and any other port of a register should not be driven by the same signal source                                                                                                                                                                                ; On           ;    ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains                                                                                                                                                                                        ; On           ;    ;
+; Rule D102: Multiple data bits that are transferred across asynchronous clock domains are synchronized, but not all bits may be aligned in the receiving clock domain                                                                                                                 ; On           ;    ;
+; Rule D103: Data bits are not correctly synchronized when transferred between asynchronous clock domains                                                                                                                                                                              ; On           ;    ;
+; Rule M101: Data bits are not synchronized when transferred to the state machine of asynchronous clock domains                                                                                                                                                                        ; Off          ;    ;
+; Rule M102: No reset signal defined to initialize the state machine                                                                                                                                                                                                                   ; Off          ;    ;
+; Rule M103: State machine should not contain an unreachable state                                                                                                                                                                                                                     ; Off          ;    ;
+; Rule M104: State machine should not contain a deadlock state                                                                                                                                                                                                                         ; Off          ;    ;
+; Rule M105: State machine should not contain a dead transition                                                                                                                                                                                                                        ; Off          ;    ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+----+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Medium Violations                                                                                                  ;
++---------------------------------------------------------------------------------------+----------------------------+
+; Rule name                                                                             ; Name                       ;
++---------------------------------------------------------------------------------------+----------------------------+
+; Rule R102: External reset signals should be synchronized using two cascaded registers ; key_n[0]                   ;
+;  Reset signal destination node(s) list                                                ; current_state.roll_state   ;
+;  Reset signal destination node(s) list                                                ; current_state.result_state ;
+;  Reset signal destination node(s) list                                                ; hex0[0]~reg0               ;
+;  Reset signal destination node(s) list                                                ; hex0[1]~reg0               ;
+;  Reset signal destination node(s) list                                                ; hex0[2]~reg0               ;
+;  Reset signal destination node(s) list                                                ; hex0[5]~reg0               ;
+;  Reset signal destination node(s) list                                                ; hex1[0]~reg0               ;
+;  Reset signal destination node(s) list                                                ; hex2[0]~reg0               ;
+;  Reset signal destination node(s) list                                                ; hex3[0]~reg0               ;
+;  Reset signal destination node(s) list                                                ; hex1[1]~reg0               ;
++---------------------------------------------------------------------------------------+----------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Information only Violations                                                                                                                                                                               ;
++------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------+
+; Rule name                                                        ; Name                                                                                                                         ; Fan-Out ;
++------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------+
+; Rule T101: Nodes with more than the specified number of fan-outs ; current_state.roll_state                                                                                                     ; 42      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; key_n[1]                                                                                                                     ; 44      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; clock_50~clkctrl                                                                                                             ; 49      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_24_result_int[25]~48 ; 51      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_23_result_int[24]~46 ; 71      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_22_result_int[23]~44 ; 68      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_21_result_int[22]~42 ; 65      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_20_result_int[21]~40 ; 62      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_19_result_int[20]~38 ; 59      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_18_result_int[19]~36 ; 56      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_17_result_int[18]~34 ; 53      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_16_result_int[17]~32 ; 50      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_15_result_int[16]~30 ; 47      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_14_result_int[15]~28 ; 44      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_13_result_int[14]~26 ; 41      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_11_result_int[12]~22 ; 35      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_10_result_int[11]~20 ; 32      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_12_result_int[13]~24 ; 38      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_23_result_int[24]~46 ; 71      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_22_result_int[23]~44 ; 68      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_21_result_int[22]~42 ; 65      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_20_result_int[21]~40 ; 62      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_19_result_int[20]~38 ; 59      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_18_result_int[19]~36 ; 56      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_17_result_int[18]~34 ; 53      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_24_result_int[25]~48 ; 51      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_16_result_int[17]~32 ; 50      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; clock_50~clkctrl                                                                                                             ; 49      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_15_result_int[16]~30 ; 47      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_14_result_int[15]~28 ; 44      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; key_n[1]                                                                                                                     ; 44      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; current_state.roll_state                                                                                                     ; 42      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_13_result_int[14]~26 ; 41      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_12_result_int[13]~24 ; 38      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_11_result_int[12]~22 ; 35      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_10_result_int[11]~20 ; 32      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_9_result_int[10]~18  ; 29      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_8_result_int[9]~16   ; 26      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; sw9                                                                                                                          ; 25      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_25_result_int[26]~50 ; 25      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_7_result_int[8]~14   ; 23      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; key_n[0]                                                                                                                     ; 21      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_6_result_int[7]~12   ; 20      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_5_result_int[6]~10   ; 17      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_4_result_int[5]~8    ; 14      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_3_result_int[4]~6    ; 11      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; random_number[2]                                                                                                             ; 8       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_2_result_int[3]~4    ; 8       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; current_state.result_state                                                                                                   ; 8       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; random_number[1]                                                                                                             ; 7       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; random_number[3]                                                                                                             ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; random_number[19]                                                                                                            ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; random_number[0]                                                                                                             ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; random_number[18]                                                                                                            ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; random_number[4]                                                                                                             ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; random_number[16]                                                                                                            ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; random_number[10]                                                                                                            ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; random_number[7]                                                                                                             ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; random_number[12]                                                                                                            ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; random_number[6]                                                                                                             ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; random_number[14]                                                                                                            ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; random_number[11]                                                                                                            ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; random_number[17]                                                                                                            ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; random_number[23]                                                                                                            ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; random_number[5]                                                                                                             ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; random_number[22]                                                                                                            ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; random_number[8]                                                                                                             ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; random_number[21]                                                                                                            ; 5       ;
++------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------+
+; Design Assistant Messages ;
++---------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Design Assistant
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Apr 18 15:09:30 2023
+Info: Command: quartus_drc --read_settings_files=on --write_settings_files=off Dice_Roll -c Dice_Roll
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Dice_Roll.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332144): No user constrained base clocks found in the design
+Warning (308023): (Medium) Rule R102: External reset signals should be synchronized using two cascaded registers. Found 1 node(s) related to this rule.
+    Warning (308010): Node  "key_n[0]"
+Info (308046): (Information) Rule T101: Nodes with more than the specified number of fan-outs. (Value defined:30). Found 18 node(s) with highest fan-out.
+    Info (308011): Node  "current_state.roll_state"
+    Info (308011): Node  "key_n[1]"
+    Info (308011): Node  "clock_50~clkctrl"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_24_result_int[25]~48"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_23_result_int[24]~46"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_22_result_int[23]~44"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_21_result_int[22]~42"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_20_result_int[21]~40"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_19_result_int[20]~38"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_18_result_int[19]~36"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_17_result_int[18]~34"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_16_result_int[17]~32"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_15_result_int[16]~30"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_14_result_int[15]~28"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_13_result_int[14]~26"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_11_result_int[12]~22"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_10_result_int[11]~20"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_12_result_int[13]~24"
+Info (308044): (Information) Rule T102: Top nodes with the highest number of fan-outs. (Value defined:50). Found 50 node(s) with highest fan-out.
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_23_result_int[24]~46"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_22_result_int[23]~44"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_21_result_int[22]~42"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_20_result_int[21]~40"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_19_result_int[20]~38"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_18_result_int[19]~36"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_17_result_int[18]~34"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_24_result_int[25]~48"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_16_result_int[17]~32"
+    Info (308011): Node  "clock_50~clkctrl"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_15_result_int[16]~30"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_14_result_int[15]~28"
+    Info (308011): Node  "key_n[1]"
+    Info (308011): Node  "current_state.roll_state"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_13_result_int[14]~26"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_12_result_int[13]~24"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_11_result_int[12]~22"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_10_result_int[11]~20"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_9_result_int[10]~18"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_8_result_int[9]~16"
+    Info (308011): Node  "sw9"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_25_result_int[26]~50"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_7_result_int[8]~14"
+    Info (308011): Node  "key_n[0]"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_6_result_int[7]~12"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_5_result_int[6]~10"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_4_result_int[5]~8"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_3_result_int[4]~6"
+    Info (308011): Node  "random_number[2]"
+    Info (308011): Node  "lpm_divide:Mod0|lpm_divide_88m:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_06f:divider|add_sub_2_result_int[3]~4"
+    Info (308002): Truncated list of Design Assistant messages to 30 messages. Go to sections under Design Assistant section of Compilation Report for complete lists of Design Assistant messages generated.
+Info (308007): Design Assistant information: finished post-fitting analysis of current design -- generated 68 information messages and 1 warning messages
+Info: Quartus II 64-Bit Design Assistant was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4525 megabytes
+    Info: Processing ended: Tue Apr 18 15:09:31 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

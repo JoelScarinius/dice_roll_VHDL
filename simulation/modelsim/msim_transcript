@@ -1,0 +1,121 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Dice_Roll_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab4/Dice_Roll.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity dice_roll
+# -- Compiling architecture rtl of dice_roll
+# 
+vsim work.dice_roll
+# vsim work.dice_roll 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.dice_roll(rtl)
+add wave -position end  sim:/dice_roll/clock_50
+add wave -position end  sim:/dice_roll/sw9
+add wave -position end  sim:/dice_roll/key_n
+add wave -position end  sim:/dice_roll/ledr
+add wave -position end  sim:/dice_roll/ledg
+add wave -position end  sim:/dice_roll/hex0
+add wave -position end  sim:/dice_roll/hex1
+add wave -position end  sim:/dice_roll/hex2
+add wave -position end  sim:/dice_roll/hex3
+add wave -position end  sim:/dice_roll/current_state
+add wave -position end  sim:/dice_roll/next_state
+add wave -position end  sim:/dice_roll/random_number
+add wave -position end  sim:/dice_roll/random_number_2
+add wave -position end  sim:/dice_roll/sw9_r
+add wave -position end  sim:/dice_roll/reset_n_r
+add wave -position end  sim:/dice_roll/reset_n_2r
+add wave -position end  sim:/dice_roll/roll_key_r
+add wave -position end  sim:/dice_roll/roll_key_2r
+add wave -position end  sim:/dice_roll/roll_key_3r
+add wave -position end  sim:/dice_roll/value_1
+add wave -position end  sim:/dice_roll/result
+do ../../run_sim.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity dice_roll
+# -- Compiling architecture rtl of dice_roll
+# Loading work.dice_roll(rtl)
+# ** Fatal: (vsim-3421) Value 7 for random_number_2 is out of range 0 to 6.
+#    Time: 190 ns  Iteration: 0  Process: /dice_roll/p_state_machine File: C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab4/Dice_Roll.vhd
+# Fatal error in Process p_state_machine at C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab4/Dice_Roll.vhd line 93
+# 
+# HDL call sequence:
+# Stopped at C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab4/Dice_Roll.vhd 93 Process p_state_machine
+# 
+# ** Error: evaluating expression "key_n(1)"
+# No object found matching "key_n".
+# Error in macro ./../../run_sim.do line 16
+# evaluating expression "key_n(1)"
+# No object found matching "key_n".
+# 
+#     while executing
+# "force key_n(1) 0"
+do ../../run_sim.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity dice_roll
+# -- Compiling architecture rtl of dice_roll
+# Loading work.dice_roll(rtl)
+# ** Fatal: (vsim-3421) Value 7 for random_number_2 is out of range 0 to 6.
+#    Time: 290 ns  Iteration: 0  Process: /dice_roll/p_state_machine File: C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab4/Dice_Roll.vhd
+# Fatal error in Process p_state_machine at C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab4/Dice_Roll.vhd line 93
+# 
+# HDL call sequence:
+# Stopped at C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab4/Dice_Roll.vhd 93 Process p_state_machine
+# 
+# ** Error: evaluating expression "key_n(1)"
+# No object found matching "key_n".
+# Error in macro ./../../run_sim.do line 19
+# evaluating expression "key_n(1)"
+# No object found matching "key_n".
+# 
+#     while executing
+# "force key_n(1) 1"
+do ../../run_sim.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity dice_roll
+# -- Compiling architecture rtl of dice_roll
+# Loading work.dice_roll(rtl)
+# ** Fatal: (vsim-3421) Value 7 for random_number_2 is out of range 0 to 6.
+#    Time: 290 ns  Iteration: 0  Process: /dice_roll/p_state_machine File: C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab4/Dice_Roll.vhd
+# Fatal error in Process p_state_machine at C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab4/Dice_Roll.vhd line 93
+# 
+# HDL call sequence:
+# Stopped at C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab4/Dice_Roll.vhd 93 Process p_state_machine
+# 
+# ** Error: evaluating expression "key_n(1)"
+# No object found matching "key_n".
+# Error in macro ./../../run_sim.do line 19
+# evaluating expression "key_n(1)"
+# No object found matching "key_n".
+# 
+#     while executing
+# "force key_n(1) 1"

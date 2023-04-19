@@ -1,0 +1,42 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Joel-\Desktop\Civ_Data\Digital_Electronics\VHDL\Labbar\Lab4\simulation\modelsim
+Edice_roll
+Z1 w1681829797
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\Joel-\Desktop\Civ_Data\Digital_Electronics\VHDL\Labbar\Lab4\simulation\modelsim
+Z6 8C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab4/Dice_Roll.vhd
+Z7 FC:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab4/Dice_Roll.vhd
+l0
+L5
+VUfKYLIL48nG=H3;VC1_[V3
+!s100 d6`7>Fc0^iWg`:_XiUX`A2
+Z8 OV;C;10.1d;51
+32
+!i10b 1
+Z9 !s108 1681829803.216000
+Z10 !s90 -reportprogress|300|-work|work|C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab4/Dice_Roll.vhd|
+Z11 !s107 C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab4/Dice_Roll.vhd|
+Z12 o-work work -O0
+Z13 tExplicit 1
+Artl
+R2
+R3
+R4
+Z14 DEx4 work 9 dice_roll 0 22 UfKYLIL48nG=H3;VC1_[V3
+l62
+L19
+V8d5SR<zTYTFB2^7[<kRzo0
+!s100 elS`<=`K9:f?Oj7zEU9061
+R8
+32
+!i10b 1
+R9
+R10
+R11
+R12
+R13
