@@ -27,6 +27,8 @@
 # general whitelist
 !.publish
 !.git*
+/db
+/Lab assignment 4 - Dice roll.pdf
 
 *.cf
 JSONTestSuite/config.pkg.vhdl
